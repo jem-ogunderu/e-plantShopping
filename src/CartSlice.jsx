@@ -25,8 +25,9 @@ export const CartSlice = createSlice({
         const { name, quantity } = action.payload; // Destructure product details from the action payload
         const exist = state.items.find(item => item.name === name);
 
-        if (exist)
+        if (exist){
             exist.quantity = quantity;
+        }
     
     },
   },
